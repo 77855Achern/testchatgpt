@@ -9,15 +9,13 @@ async def test_model_fallback(monkeypatch):
     service = ModelService()
     calls = []
 
-    async def patched_generate(self, prompt: str):
-        for model in self.models:
-            calls.append(model)
-            if model == self.models[0]:
-                continue
-            return {"model": model, "response": "ok"}
-        raise RuntimeError
+    async def fake_call(model, prompt, system_prompt=None, image=None):
+        calls.append(model)
+        if model == service.models[0]:
+            raise RuntimeError("fail")
+        return {"model": model, "response": "ok"}
 
-    monkeypatch.setattr(ModelService, 'generate', patched_generate)
+    monkeypatch.setattr(service, 'call_model', fake_call)
     res = await service.generate("hi")
     assert res["model"] == service.models[1]
-    assert calls[0] == service.models[0]
+    assert calls == [service.models[0], service.models[1]]

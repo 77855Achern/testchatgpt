@@ -18,5 +18,7 @@ async def index(request: Request):
 async def chat(request: Request):
     data = await request.json()
     prompt = data.get("prompt", "")
-    result = await model_service.generate(prompt)
+    model = data.get("model")
+    style = data.get("style")
+    result = await model_service.generate(prompt, model=model, style=style)
     return result

@@ -11,3 +11,8 @@ This is a minimal chat application using FastAPI.
 ## Tests
 
 Run `pytest`.
+
+## Features
+
+- Auswahl zwischen verschiedenen KI-Modellen und Stilen.
+- Automatisches Fallback auf kleinere Modelle bei Fehlern.

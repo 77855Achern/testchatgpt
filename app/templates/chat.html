@@ -10,6 +10,23 @@
     <div id="messages"></div>
     <form id="chat-form">
         <input type="text" id="prompt" placeholder="Nachricht" required>
+        <select id="model">
+            <option value="">Standard</option>
+            <option value="gpt-4.1">gpt-4.1</option>
+            <option value="gpt-4.1-mini">gpt-4.1-mini</option>
+            <option value="gpt-4.1-nano">gpt-4.1-nano</option>
+            <option value="codestral-25.01">Codestral 25.01</option>
+            <option value="grok-3">Grok 3</option>
+            <option value="phi-4-reasoning">Phi-4-Reasoning</option>
+            <option value="deepseek-r1">DeepSeek-R1</option>
+            <option value="llama-3.2-11b-vision-instruct">Llama-3.2-11B-Vision-Instruct</option>
+        </select>
+        <select id="style">
+            <option value="">Neutral</option>
+            <option value="nett">Nett</option>
+            <option value="unhöflich">Unhöflich</option>
+            <option value="optimierer">Prompt-Optimierer</option>
+        </select>
         <button type="submit">Senden</button>
     </form>
 </div>

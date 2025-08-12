@@ -3,12 +3,14 @@ document.getElementById('chat-form').addEventListener('submit', async (e) => {
     const input = document.getElementById('prompt');
     const prompt = input.value;
     if(!prompt) return;
+    const model = document.getElementById('model').value;
+    const style = document.getElementById('style').value;
     addMessage('user', prompt);
     input.value='';
     const res = await fetch('/api/chat', {
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body: JSON.stringify({prompt})
+        body: JSON.stringify({prompt, model, style})
     });
     const data = await res.json();
     addMessage('assistant', data.response);
