@@ -25,7 +25,10 @@ _cached_config: Optional[Config] = None
 def load_config(path: str = "config.yaml") -> Config:
     global _cached_config
     if _cached_config is None:
-        with open(path, 'r', encoding='utf-8') as f:
-            data = yaml.safe_load(f) or {}
+        cfg_path = Path(path)
+        data = {}
+        if cfg_path.exists():
+            with cfg_path.open('r', encoding='utf-8') as f:
+                data = yaml.safe_load(f) or {}
         _cached_config = Config(**data)
     return _cached_config

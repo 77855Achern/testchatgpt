@@ -15,3 +15,8 @@ models:
   gpt-4.1: {}
   gpt-4.1-mini: {}
   gpt-4.1-nano: {}
+  codestral-25.01: {}
+  grok-3: {}
+  phi-4-reasoning: {}
+  deepseek-r1: {}
+  llama-3.2-11b-vision-instruct: {}
