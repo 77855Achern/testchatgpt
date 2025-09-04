@@ -1,0 +1,22 @@
+{
+  "name": "Concrete+Terracotta",
+  "items": [
+    {"block_id":"minecraft:white_concrete","rgb":[207,213,214]},
+    {"block_id":"minecraft:light_gray_concrete","rgb":[142,142,134]},
+    {"block_id":"minecraft:gray_concrete","rgb":[55,58,62]},
+    {"block_id":"minecraft:black_concrete","rgb":[8,10,15]},
+    {"block_id":"minecraft:red_concrete","rgb":[142,33,33]},
+    {"block_id":"minecraft:orange_concrete","rgb":[224,97,0]},
+    {"block_id":"minecraft:yellow_concrete","rgb":[238,175,21]},
+    {"block_id":"minecraft:lime_concrete","rgb":[94,168,24]},
+    {"block_id":"minecraft:green_concrete","rgb":[73,91,36]},
+    {"block_id":"minecraft:cyan_concrete","rgb":[21,119,136]},
+    {"block_id":"minecraft:blue_concrete","rgb":[44,46,143]},
+    {"block_id":"minecraft:light_blue_concrete","rgb":[36,137,199]},
+    {"block_id":"minecraft:purple_concrete","rgb":[100,32,156]},
+    {"block_id":"minecraft:magenta_concrete","rgb":[169,48,159]},
+    {"block_id":"minecraft:pink_concrete","rgb":[214,101,143]},
+    {"block_id":"minecraft:brown_concrete","rgb":[96,59,31]},
+    {"block_id":"minecraft:white_terracotta","rgb":[210,178,161]}
+  ]
+}
